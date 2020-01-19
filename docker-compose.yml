@@ -1,12 +1,12 @@
 version: '3'
 services:
-  mongo: 
+  mongopruebaborja: 
     build: ./mongoData/
-    image: mongo
-  springboot: 
+    image: borjaortizllamas/mongopruebaborja
+  springbootpruebaborja: 
     build: ./appClients/
-    image: springboot
+    image: borjaortizllamas/springbootpruebaborja
     ports:
       - "8080:8080"
     depends_on:
-      - mongo
+      - mongopruebaborja
