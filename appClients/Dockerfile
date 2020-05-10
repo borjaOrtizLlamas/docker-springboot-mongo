@@ -7,4 +7,4 @@ apt-get install -y --no-install-recommends software-properties-common git maven
 RUN git clone https://github.com/borjaOrtizLlamas/springboot.git /tmp/springboot && \
 cd /tmp/springboot && mvn clean install
 VOLUME ["/var/log/"]
-CMD ["java","-jar","/tmp/springboot/target/gs-rest-service-1.0.1.jar", "com.borja.Aplication",  ">>", "/var/log/spring.log"] 
+CMD ["java","-jar","/tmp/springboot/target/gs-rest-service-1.0.1.jar", "com.borja.Aplication"]
